@@ -1,6 +1,0 @@
-#include "main.h"
-void _print_c(int c)
-{
-
-
-}
