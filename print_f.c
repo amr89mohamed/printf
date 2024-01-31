@@ -9,7 +9,7 @@
   */int (*find_function(const char *format))(va_list)
 {
 unsigned int i = 0;
-to_find find_f[] = {
+code_f find_f[] = {
 {"c", print_char},
 {"s", print_string},
 {"i", print_int},
@@ -37,38 +37,38 @@ return (NULL);
   * Return: size the output text;
   */int _printf(const char *format, ...)
 {
-va_list args;
+va_list ap;
 int (*f)(va_list);
-unsigned int i = 0, c = 0;
+unsigned int i = 0, cprint = 0;
 if (format == NULL)
 return (-1);
-va_start(args, format);
+va_start(ap, format);
 while (format[i])
 {
 while (format[i] != '%' && format[i])
 {
 _putchar(format[i]);
-c++;
+cprint++;
 i++;
 }
 if (format[i] == '\0')
-return (c);
+return (cprint);
 f = find_function(&format[i + 1]);
 if (f != NULL)
 {
-c += f(args);
+cprint += f(ap);
 i += 2;
 continue;
 }
 if (!format[i + 1])
 return (-1);
 _putchar(format[i]);
-c++;
+cprint++;
 if (format[i + 1] == '%')
 i += 2;
 else
 i++;
 }
-va_end(args);
-return (c);
+va_end(ap);
+return (cprint);
 }
