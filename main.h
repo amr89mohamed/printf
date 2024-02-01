@@ -12,7 +12,7 @@ int _putchar(char c);
 * two data types
 * char pointers @fs && fun pointer
 * @f
-*/typedef struct funcation_find{
+*/typedef struct funcation_find {
 char *fs;
 int (*f)();
 }ff;
