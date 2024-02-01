@@ -2,6 +2,7 @@
 #define MAIN_H_
 #include <stdarg.h>
 #include <stdlib.h>
+#include <stdio.h>
 int _printf(const char *format, ...);
 int _print_str(va_list val);
 int _print_char(va_list val);
