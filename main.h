@@ -15,5 +15,5 @@ int _putchar(char c);
 */typedef struct funcation_find {
 char *fs;
 int (*f)();
-}ff;
+} ff;
 #endif
