@@ -10,7 +10,6 @@
 ff find_fun[] = {
 {"%c", _print_char},
 {"%s", _print_str}, {"%%", _print_pers},
-{NULL, NULL}
 };
 va_list args;
 int i = 0, len = 0;
