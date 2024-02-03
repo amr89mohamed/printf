@@ -10,6 +10,8 @@ int _print_char(va_list val);
 int _print_pers(void);
 int _putchar(char c);
 int _strlen(const char *s);
+int _printf_int(va_list val);
+int _printf_dec(va_list val);
 /*
 * this a struct contuins
 * two data types
