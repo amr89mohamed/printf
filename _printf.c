@@ -23,7 +23,7 @@ return (-1);
 again:
 while (format[i])
 {
-j = 2;
+j = 4;
 while (j >= 0)
 {
 if (find_fun[j].fs[0] == format[i] && find_fun[j].fs[1] == format[i + 1])
